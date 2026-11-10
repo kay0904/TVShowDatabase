@@ -237,34 +237,5 @@ home-container > p {
     border: none;
 }
 
-search-form {
-    width: 350px;
-    max-width: 90%;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #eef6ff;
-    border: 2px solid #3498db;
-    border-radius: 10px;
-}
 
-search-form label {
-    display: block;
-    margin: 10px 0;
-}
 
-search-form input,
-search-form select {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-search-form button {
-    background-color: #3498db;
-    color: white;
-    padding: 10px 25px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
