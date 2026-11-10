@@ -1,0 +1,47 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="home-container">
+
+    <h1>Welcome to the TV Show Database</h1>
+
+    <p>
+        Discover your favourite TV shows and explore
+        information about genres, seasons, episodes,
+        cast members and ratings.
+    </p>
+
+    <img src="{{ url_for('static', filename='tvshow.jpg') }}"
+         alt="TV Shows" width="400">
+
+    <h2>Our Features</h2>
+
+    <div class="features">
+        <div class="feature-box">
+            <h3>Search TV Shows</h3>
+            Find shows by title, genre or rating.
+        </div>
+
+        <div class="feature-box">
+            <h3>Register and Login</h3>
+            Create an account to access the application.
+        </div>
+
+        <div class="feature-box">
+            <h3>Premium Information</h3>
+            Unlock additional TV show information.
+        </div>
+
+        <div class="feature-box">
+            <h3>Graphs and Statistics</h3>
+            Explore TV show statistics and trends.
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
+
+	

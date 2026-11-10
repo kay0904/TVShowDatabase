@@ -1,0 +1,25 @@
+
+<!doctype html>
+<html>
+	<head>
+		{% if title %}
+		<title>{{ title }}</title>
+		{% else %}
+		<title>Welcome to Earth</title>
+		{% endif %}
+		<link rel ="stylesheet" href="{{ url_for('static', filename='stylesheet.css') }}">
+	</head>
+	<body>
+	<nav> TV Show Database:
+		<a href="/index">Home</a>
+		<a href="/aboutus">About Us</a>
+		<a href="/search">Search Tv Shows</a>
+		<a href="/register">Register</a>
+		<a href="/login">Login</a>
+		<a href="/Payment">Payment</a>
+		<a href="/statistics">Statistics</a>
+	</nav>
+		<hr>
+		{% block content %} {% endblock %}
+	</body>
+</html>
