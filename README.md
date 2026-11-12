@@ -1,17 +1,16 @@
 # TVShowDatabase
+
 ## Project Description
 TV Show Database is a web application developed using
 Python, Flask and PostgreSQL. The application allows
 users to explore information about different TV shows.
-
-This project was developed for the INFO8021
-DevOps Strategy and Automation module.
 
 ## Technologies Used
 - Python
 - Flask
 - HTML
 - CSS
+- Jinja2
 - PostgreSQL
 - pgAdmin 4
 - GitHub
@@ -19,12 +18,19 @@ DevOps Strategy and Automation module.
 ## Website Pages
 - **Home:** Introduces the application and its features.
 - **About Us:** Provides information about the application.
+- **Search TV Shows:** Allows users to search for TV shows
+  by title or genre using records from PostgreSQL.
+- **Login:** Allows registered users to log in.
+- **Register:** Provides a user registration form.
+- **Add TV Show:** Provides a page for adding TV shows.
+- **Payments:** Provides a page for payment functionality.
 
 ## Database
 The PostgreSQL database contains three tables:
 
 - **Users:** Stores user account information.
-- **TV_Shows:** Stores TV show information.
+- **TV_Shows:** Stores TV show information, including
+  title, genre, release date, seasons, episodes and rating.
 - **Payments:** Stores payment records.
 
 ## Project Files
@@ -34,21 +40,53 @@ The PostgreSQL database contains three tables:
 - `initialise_db.py` - Creates the database and tables.
 - `populate_db.py` - Inserts database records.
 - `requirements.txt` - Required Python packages.
+- `README.md` - Project information and instructions.
 
 ## Installation
 1. Clone or download the repository.
-2. Install the required packages:
+2. Install Python and PostgreSQL.
+3. Install the required packages:
+
    `pip install -r requirements.txt`
-3. Configure PostgreSQL and environment variables.
-4. Run `python initialise_db.py`
-5. Run `python populate_db.py`
-6. Start the Flask application.
+
+4. Configure PostgreSQL and set the DB_PASSWORD
+   environment variable.
+
+5. Create the database and tables:
+
+   `python initialise_db.py`
+
+6. Populate the database:
+
+   `python populate_db.py`
+
+7. Start the Flask application:
+
+   `python -m flask run`
+
+8. Open the local website address displayed in
+   the terminal.
+
+## Project Status
+The project is currently under development.
+
+The Home and About Us pages have been created.
+The Search TV Shows functionality has been connected
+to PostgreSQL, allowing users to search for TV shows
+by title or genre and the Login/Register functionality 
+has been created.
+
+Additional database functionalities are being
+developed and tested.
 
 ## Future Development
-Future features will include:
-- User Registration
-- User Login and Logout
-- Search TV Shows
-- View TV Show Information
-- Payment Options
-- Statistics and Graphs
+Future development will focus on:
+- Saving new user registrations to PostgreSQL.
+- Adding TV shows through the website.
+- Implementing payment functionality.
+- Improving website design and functionality.
+
+## Developer
+Developed for the INFO8021 DevOps Strategy
+and Automation module at Munster Technological
+University (MTU).
