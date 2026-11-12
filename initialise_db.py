@@ -7,11 +7,11 @@ from psycopg2 import sql
 conn = psycopg2.connect(
     database="postgres",
     user="postgres",
-    password="postgress",
+    password="your_password",
     host="localhost",
     port="5432"
 )
-0
+
 # Allow database creation
 conn.autocommit = True
 
@@ -21,14 +21,14 @@ cur = conn.cursor()
 # Check if the database already exists
 cur.execute(
     "SELECT 1 FROM pg_database WHERE dataname = %s;",
-    ("tvshowdatabase",)
+    ("tvshow",)
 )
 
 # Create database if it does not exist
 if cur.fetchone() is None:
     cur.execute(
         sql.SQL("CREATE DATABASE {}").format(
-            sql.Identifier("tvshowdatabase")
+            sql.Identifier("tvshow")
         )
     )
     print("Database created successfully!")
@@ -43,7 +43,7 @@ conn.close()
 conn = psycopg2.connect(
     database="postgres",
     user="postgres",
-    password="postgress",
+    password="your_password",
     host="localhost",
     port="5432"
 )
