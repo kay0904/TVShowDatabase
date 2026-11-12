@@ -8,7 +8,7 @@ from werkzeug.security import generate_password_hash
 conn = psycopg2.connect(
     database="tvshow",
     user="postgres",
-    password="postgress",
+    password="your_password",
     host="localhost",
     port="5432"
 )
