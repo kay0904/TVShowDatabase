@@ -1,25 +1,33 @@
-
 <!doctype html>
 <html>
 	<head>
 		{% if title %}
 		<title>{{ title }}</title>
 		{% else %}
-		<title>Welcome to Earth</title>
+		<title>Welcome to Tv Show Database</title>
 		{% endif %}
 		<link rel ="stylesheet" href="{{ url_for('static', filename='stylesheet.css') }}">
 	</head>
 	<body>
 	<nav> TV Show Database:
-		<a href="/index">Home</a>
-		<a href="/aboutus">About Us</a>
-		<a href="/search">Search Tv Shows</a>
-		<a href="/register">Register</a>
-		<a href="/login">Login</a>
-		<a href="/Payment">Payment</a>
-		<a href="/statistics">Statistics</a>
+		<a href="{{ url_for('index') }}">Home</a>
+		<a href="{{ url_for('aboutus') }}">About us</a>
+		<a href="{{ url_for('login') }}">Login/Register</a>
+		<a href="{{ url_for('search') }}">Search Tv Shows</a>
+		<a href="{{ url_for('add_show') }}">Add Tv Shows</a>
+		<a href="{{ url_for('payment') }}">Payment</a>
 	</nav>
 		<hr>
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+			<ul>
+				{% for message in messages %}
+					<li>{{ message }}</li>
+				{% endfor %}
+			</ul>
+			{% endif %}
+		{% endwith %}
+
 		{% block content %} {% endblock %}
 	</body>
 </html>
