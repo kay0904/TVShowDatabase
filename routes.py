@@ -47,7 +47,7 @@ def search():
 
     # Search for matching TV shows
     sql = """SELECT title, genre, release_date, seasons,
-                    episodes, rating, cast_member
+                    episodes, rating, cast_member, premium_info
              FROM tv_shows
              WHERE title ILIKE %s"""
 
