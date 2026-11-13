@@ -44,28 +44,32 @@ The PostgreSQL database contains three tables:
 
 ## Installation
 1. Clone or download the repository.
+
 2. Install Python and PostgreSQL.
-3. Install the required packages:
 
-   `pip install -r requirements.txt`
+3. Open Command Prompt in the project folder.
 
-4. Configure PostgreSQL and set the DB_PASSWORD
-   environment variable.
+4. Create a virtual environment:
+    python -m venv .venv
 
-5. Create the database and tables:
+5.Activate the virtual environment:
+  .venv\Scripts\activate
 
-   `python initialise_db.py`
+6.Install the required packages:
+  pip install -r requirements.txt
 
-6. Populate the database:
+7.Configure PostgreSQL and set the DB_PASSWORD environment variable to the password for the PostgreSQL user configured in the application.
 
-   `python populate_db.py`
+8.Create the database and tables:
+  python initialise_db.py
 
-7. Start the Flask application:
+9.Populate the database:
+  python populate_db.py
 
-   `python -m flask run`
+10.Start the Flask application:
+  python -m flask run
 
-8. Open the local website address displayed in
-   the terminal.
+11.Open the local website address displayed in the terminal.
 
 ## Project Status
 The project is currently under development.
