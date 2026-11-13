@@ -43,14 +43,32 @@ The PostgreSQL database contains three tables:
 - `README.md` - Project information and instructions.
 
 ## Installation
+## Installation
+
 1. Clone or download the repository.
+
 2. Install Python and PostgreSQL.
+
 3. Install the required packages:
 
    `pip install -r requirements.txt`
 
-4. Configure PostgreSQL and set the DB_PASSWORD
-   environment variable.
+4. Configure PostgreSQL and set the DB_PASSWORD environment variable.
+
+   The application requires a PostgreSQL password to connect
+   to the database. Use the password for your local PostgreSQL
+   user rather than the original developer's password.
+
+   For Windows Command Prompt:
+
+   `set "DB_PASSWORD=your_postgresql_password"`
+
+   For PowerShell:
+
+   `$env:DB_PASSWORD = "your_postgresql_password"`
+
+   Replace `your_postgresql_password` with your own
+   PostgreSQL password.
 
 5. Create the database and tables:
 
@@ -60,13 +78,11 @@ The PostgreSQL database contains three tables:
 
    `python populate_db.py`
 
-7. Start the Flask application:
+7. Start the Flask application in the same terminal:
 
    `python -m flask run`
 
-8. Open the local website address displayed in
-   the terminal.
-
+8. Open the local website address displayed in the terminal.
 ## Project Status
 The project is currently under development.
 
